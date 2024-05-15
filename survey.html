@@ -55,7 +55,7 @@
               const urlVar04 = urlParams.get('urlVar04')
               const urlVar05 = urlParams.get('urlVar05')
 
-              api.fn.answers({surveyor_id: urlVar01});
+              api.fn.answers({surveyor_id: parseInt(urlVar01)});
               
               api.fn.answers({surveyor_start_time: 1});
               api.fn.answers({surveyor_start_time_1_text: urlVar02});
