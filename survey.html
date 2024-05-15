@@ -32,7 +32,7 @@
 
   <body>
     <survalyzer-survey
-      surveyhash="aztlfnnqyi"
+      surveyhash="griejimivl"
       tenant="silverlining"
     ></survalyzer-survey>
 
@@ -46,6 +46,21 @@
           const listSearchHandler = () => {
             console.log("Current Page Index: ", api.fn.getCurrentPageIndex() );
 
+            if ( api.fn.getCurrentPageIndex()==0) {
+              const queryString = window.location.search;
+              const urlParams = new URLSearchParams(queryString);
+              const urlVar01 = urlParams.get('urlVar01');
+              const urlVar02 = urlParams.get('urlVar02')
+              const urlVar03 = urlParams.get('urlVar03')
+              const urlVar04 = urlParams.get('urlVar04')
+              const urlVar05 = urlParams.get('urlVar05')
+
+              api.fn.answers({urlVar01: urlVar01});
+              api.fn.answers({urlVar02: urlVar02});
+              api.fn.answers({urlVar03: urlVar03});
+              api.fn.answers({urlVar04: urlVar04});
+              api.fn.answers({urlVar05: urlVar05});              
+            }
    
           };
 
