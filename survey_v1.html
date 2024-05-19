@@ -68,21 +68,6 @@
               api.fn.answers({urlVar03: urlVar03});
               api.fn.answers({urlVar04: urlVar04});
             }
-            if (api.fn.getCurrentPageIndex()===1) {
-              //Trigger apply unset padding
-              $('.rt-qelement').css("padding-top","unset");
-              $('.rt-qelement').css("padding-bottom","unset ");
-              $('.rt-matrix-container').css("padding-top","unset");
-              $('.rt-matrix-container').css("padding-bottom","unset")
-              $('.rt-mtx-answer-choice').css("padding-top","unset");
-              $('.rt-mtx-answer-choice').css("padding-bottom","unset");
-              $('.rt-mtx-subquestion').css("padding-top","unset");
-              $('.rt-mtx-subquestion').css("padding-bottom","unset");
-              $( '.rt-mtx-cell' ).each(function () {
-                  this.style.setProperty( 'padding', 'unset', 'important' );
-                  this.style.setProperty( 'margin', 'unset', 'important' );
-              });
-            }
    
           };
 
