@@ -84,6 +84,9 @@
               });
 
               $('body').addClass('flag-page-second');
+                $(".dx-dropdowneditor-input-wrapper").on('click', function(){
+                  $('input.dx-texteditor-input').attr('inputmode', 'none');
+                });
               }
               else {
                 $('body').removeClass('flag-page-second');
