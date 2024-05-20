@@ -82,8 +82,13 @@
                   this.style.setProperty( 'margin', 'unset', 'important' );
                   this.style.setProperty( 'font-size', '14px', 'important' )
               });
-            }
-   
+
+              $('body').addClass('flag-page-second');
+              }
+              else {
+                $('body').removeClass('flag-page-second');
+              }
+    
           };
 
           api.events.subscribe('next', listSearchHandler);
