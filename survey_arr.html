@@ -74,31 +74,41 @@
               $(".rt-qelement").css("padding-bottom", "unset ");
               $(".rt-matrix-container").css("padding-top", "unset");
               $(".rt-matrix-container").css("padding-bottom", "unset");
-              $(".rt-matrix-container").css("padding-left", "0rem");
-              $(".rt-matrix-container").css("padding-right", "0rem");
+
+
               $(".rt-mtx-answer-choice").css("padding-top", "unset");
               $(".rt-mtx-answer-choice").css("padding-bottom", "unset");
               $(".rt-mtx-subquestion").css("padding-top", "unset");
               $(".rt-mtx-subquestion").css("padding-bottom", "unset");
-              $(".rt-mtx-col-heading").css("padding-left", "0rem");
-              $(".rt-mtx-col-heading").css("padding-right", "0rem");
+
+
               // Extend the Main box
-              // $(".rt-warning-block").css("margin-right", "-10px");
-              // $(".rt-warning-block").css("margin-left", "-10px");
-              // $(".sv-interview-main").css("margin-right", "-10px");
-              // $(".sv-interview-main").css("margin-left", "-10px");
+              // $(".rt-warning-block").css("margin-right", "-3rem");
+              // $(".rt-warning-block").css("margin-left", "-3rem");
+              // $(".sv-interview-main").css("margin-right", "-4rem");
+              // $(".sv-interview-main").css("margin-left", "-3rem");
 
               $(".rt-mtx-cell").each(function () {
                 this.style.setProperty("padding", "unset", "important");
                 this.style.setProperty("margin", "unset", "important");
                 this.style.setProperty("font-size", "14px", "important");
-              });
+
+                // Find the .rt-mtx-open-container within the current .rt-mtx-cell element
+                var openContainer = $(this).find(".rt-input-text");
+
+                if (openContainer.length) {
+                  //openContainer.css("width", "100%");
+                  //this.style.setProperty("font-size", "13px", "important");
+                }
+            });
+
 
               $("body").addClass("flag-page-second");
               $(".dx-dropdowneditor-input-wrapper").on("click", function () {
                 $("input.dx-texteditor-input").attr("inputmode", "none");
               });
-            } else {
+            } 
+			    else {
               $("body").removeClass("flag-page-second");
             }
           };
