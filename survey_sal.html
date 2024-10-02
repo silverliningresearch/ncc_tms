@@ -54,19 +54,24 @@
               const urlParams = new URLSearchParams(queryString);
               const urlVar01 = urlParams.get("urlVar01");
               const urlVar02 = urlParams.get("urlVar02");
-              //const urlVar03 = urlParams.get('urlVar03')
+              const urlVar03 = urlParams.get('urlVar03')
               const urlVar04 = urlParams.get("urlVar04");
+              const urlVar05 = urlParams.get("urlVar05");
 
               api.fn.answers({ surveyor_id: parseInt(urlVar01) });
 
               api.fn.answers({ surveyor_start_time: 1 });
               api.fn.answers({ surveyor_start_time_1_text: urlVar02 });
 
+              api.fn.answers({ immigration_type: parseInt(urlVar03) });
               api.fn.answers({ location_hall: parseInt(urlVar04) });
+              api.fn.answers({ location_hall_arr: parseInt(urlVar05) });
 
               api.fn.answers({ urlVar01: urlVar01 });
               api.fn.answers({ urlVar02: urlVar02 });
+              api.fn.answers({ urlVar03: urlVar03 });
               api.fn.answers({ urlVar04: urlVar04 });
+              api.fn.answers({ urlVar05: urlVar05 });
             }
             if (api.fn.getCurrentPageIndex() === 1) {
               //Trigger apply unset padding
