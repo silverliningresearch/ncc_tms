@@ -63,9 +63,9 @@
               api.fn.answers({ surveyor_start_time: 1 });
               api.fn.answers({ surveyor_start_time_1_text: urlVar02 });
 
-              api.fn.answers({ immigration_type: parseInt(urlVar03) });
-              api.fn.answers({ location_hall: parseInt(urlVar04) });
-              api.fn.answers({ location_hall_arr: parseInt(urlVar05) });
+              if (urlVar03) api.fn.answers({ immigration_type: parseInt(urlVar03) });
+              if (urlVar04) api.fn.answers({ location_hall_dep: parseInt(urlVar04) });
+              if (urlVar05) api.fn.answers({ location_hall_arr: parseInt(urlVar05) });
 
               api.fn.answers({ urlVar01: urlVar01 });
               api.fn.answers({ urlVar02: urlVar02 });
